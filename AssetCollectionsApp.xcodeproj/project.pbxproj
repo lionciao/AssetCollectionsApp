@@ -18,6 +18,7 @@
 		0483A3A429DC327200F28A14 /* AssetCollectionsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483A3A329DC327200F28A14 /* AssetCollectionsAppUITestsLaunchTests.swift */; };
 		0483A3B229DC359000F28A14 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0483A3B129DC359000F28A14 /* Alamofire */; };
 		0483A3B529DC37E000F28A14 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 0483A3B429DC37E000F28A14 /* Nuke */; };
+		0483A3BA29DE77C900F28A14 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0483A3B929DE77C900F28A14 /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 			files = (
 				0483A3B229DC359000F28A14 /* Alamofire in Frameworks */,
 				0483A3B529DC37E000F28A14 /* Nuke in Frameworks */,
+				0483A3BA29DE77C900F28A14 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +152,7 @@
 			packageProductDependencies = (
 				0483A3B129DC359000F28A14 /* Alamofire */,
 				0483A3B429DC37E000F28A14 /* Nuke */,
+				0483A3B929DE77C900F28A14 /* Moya */,
 			);
 			productName = AssetCollectionsApp;
 			productReference = 0483A37D29DC327100F28A14 /* AssetCollectionsApp.app */;
@@ -226,6 +229,7 @@
 			packageReferences = (
 				0483A3B029DC359000F28A14 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				0483A3B329DC37E000F28A14 /* XCRemoteSwiftPackageReference "Nuke" */,
+				0483A3B829DE77C800F28A14 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 0483A37E29DC327100F28A14 /* Products */;
 			projectDirPath = "";
@@ -632,6 +636,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		0483A3B829DE77C800F28A14 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = exactVersion;
+				version = 15.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -644,6 +656,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0483A3B329DC37E000F28A14 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = Nuke;
+		};
+		0483A3B929DE77C900F28A14 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0483A3B829DE77C800F28A14 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
