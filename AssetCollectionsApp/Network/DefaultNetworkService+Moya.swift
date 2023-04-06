@@ -29,7 +29,7 @@ public final class DefaultNetworkService: NetworkService {
                     let entity = try self.decoder.decode(R.Entity.self, from: response.data)
                     completion(.success(entity))
                 } catch {
-                    // TODO: error handling
+                    completion(.failure(ServiceError.decodeFailed(reason: error)))
                 }
             case .failure(let error):
                 completion(.failure(error))
