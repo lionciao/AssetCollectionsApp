@@ -19,6 +19,7 @@ final class AssetCollectionsViewController: UIViewController {
     init(viewModel: AssetCollectionsViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        viewModel.delegate = self
     }
     
     @available(*, unavailable)
@@ -28,9 +29,48 @@ final class AssetCollectionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.fetchAssetCollections(limit: 20)
         setupUI()
     }
 }
+
+// MARK: - AssetCollectionsViewModelDelegate
+
+extension AssetCollectionsViewController: AssetCollectionsViewModelDelegate {
+    
+    func assetCollectionsViewModel(_ viewModel: AssetCollectionsViewModel, didFetchAssets assets: [Asset]) {
+        reload()
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+
+extension AssetCollectionsViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard !viewModel.shouldShowEmptyView else {
+            return 0
+        }
+        return viewModel.assets.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AssetCollectionCell.className, for: indexPath)
+        guard
+            let collectionCell = cell as? AssetCollectionCell,
+            !viewModel.shouldShowEmptyView
+        else {
+            return cell
+        }
+        let model = viewModel.assets[indexPath.item]
+        collectionCell.config(with: model)
+        return collectionCell
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension AssetCollectionsViewController: UICollectionViewDelegate {}
 
 // MARK: - UICollectionViewDelegateFlowLayout
 
@@ -42,6 +82,15 @@ extension AssetCollectionsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return flowLayout.minimumLineSpacing
+    }
+}
+
+// MARK: Helpers
+
+private extension AssetCollectionsViewController {
+    
+    func reload() {
+        collectionView.reloadData()
     }
 }
 
@@ -65,6 +114,8 @@ private extension AssetCollectionsViewController {
     
     func makeCollectionView() -> UICollectionView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
         collectionView.register(AssetCollectionCell.self, forCellWithReuseIdentifier: AssetCollectionCell.className)
         return collectionView
     }

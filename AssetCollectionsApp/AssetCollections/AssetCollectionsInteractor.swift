@@ -5,12 +5,10 @@
 //  Created by Ciao on 2023/4/7.
 //
 
-import Combine
 import Foundation
 
 final class AssetCollectionsInteractor: AssetCollectionsInteractorSpec {
     
-    @Published
     private(set) var assets: [AssetCollectionsModel.AssetModel] = []
     
     private let service: NetworkService
@@ -21,7 +19,8 @@ final class AssetCollectionsInteractor: AssetCollectionsInteractorSpec {
     
     // TODO: pagination
     func fetchAssetCollections(
-        limit: Int
+        limit: Int,
+        completion: @escaping (_ assets: [AssetCollectionsModel.AssetModel]) -> Void
     ) {
         let parameter = AssetsCollectionParameter()
         service.send(AssetCollectionsRequest(parameter: parameter)) { [weak self] result in
@@ -29,6 +28,7 @@ final class AssetCollectionsInteractor: AssetCollectionsInteractorSpec {
             if case let .success(entity) = result {
                 let model = entity.ew.map()
                 self.assets += model.assets
+                completion(self.assets)
             }
         }
     }
