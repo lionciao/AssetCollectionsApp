@@ -39,10 +39,11 @@ final class AssetDetailViewController: UIViewController {
 private extension AssetDetailViewController {
 
     func config(with model: AssetCollectionsModel.AssetModel) {
-        navigationController?.title = model.collection.name
+        title = model.collection.name
         titleLabel.text = model.name
         contentLabel.text = model.contentDescription
         coverImageView.ew.setImage(with: model.imageURL)
+        permalLinkButton.setTitle("permallink", for: .normal)
     }
 }
 
@@ -51,6 +52,7 @@ private extension AssetDetailViewController {
 private extension AssetDetailViewController {
     
     func setupUI() {
+        view.backgroundColor = .white
         [coverImageView, titleLabel, contentLabel, permalLinkButton].forEach {
             view.addSubview($0)
         }
@@ -73,7 +75,7 @@ private extension AssetDetailViewController {
         permalLinkButton.snp.makeConstraints { make in
             make.top.equalTo(contentLabel.snp.bottom).offset(10)
             make.leading.trailing.equalTo(coverImageView)
-            make.bottom.equalTo(-14)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(14)
         }
     }
     
@@ -106,6 +108,10 @@ private extension AssetDetailViewController {
     func makePermalLinkButton() -> UIButton {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.layer.borderColor = UIColor.lightGray.cgColor
+        button.layer.cornerRadius = 4
+        button.layer.borderWidth = 1
         return button
     }
 }
