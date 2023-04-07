@@ -12,7 +12,6 @@ protocol AssetCollectionsInteractorSpec: AnyObject {
     var assets: [AssetCollectionsModel.AssetModel] { get }
     
     func fetchAssetCollections(
-        limit: Int,
-        offset: Int
+        limit: Int
     )
 }

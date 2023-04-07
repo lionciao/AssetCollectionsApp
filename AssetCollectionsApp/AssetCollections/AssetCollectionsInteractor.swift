@@ -19,9 +19,9 @@ final class AssetCollectionsInteractor: AssetCollectionsInteractorSpec {
         self.service = service
     }
     
+    // TODO: pagination
     func fetchAssetCollections(
-        limit: Int,
-        offset: Int
+        limit: Int
     ) {
         let parameter = AssetsCollectionParameter()
         service.send(AssetCollectionsRequest(parameter: parameter)) { [weak self] result in
