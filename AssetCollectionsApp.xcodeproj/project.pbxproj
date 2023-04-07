@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0410EB9C29E00DAA0092B543 /* AssetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410EB9B29E00DAA0092B543 /* AssetDetailViewController.swift */; };
 		041EEF8329DFDEDE0001FD35 /* AssetCollectionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EEF8229DFDEDE0001FD35 /* AssetCollectionsInteractor.swift */; };
 		041EEF8729DFE26A0001FD35 /* AssetCollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EEF8629DFE26A0001FD35 /* AssetCollectionsViewModel.swift */; };
 		047D168D29DEDAA5000F92E7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D168C29DEDAA5000F92E7 /* NetworkService.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0410EB9B29E00DAA0092B543 /* AssetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailViewController.swift; sourceTree = "<group>"; };
 		041EEF8229DFDEDE0001FD35 /* AssetCollectionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionsInteractor.swift; sourceTree = "<group>"; };
 		041EEF8629DFE26A0001FD35 /* AssetCollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionsViewModel.swift; sourceTree = "<group>"; };
 		047D168C29DEDAA5000F92E7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		0483A37F29DC327100F28A14 /* AssetCollectionsApp */ = {
 			isa = PBXGroup;
 			children = (
+				0489A2A829E00D730051E538 /* AssetDetail */,
 				047D169F29DFDB5F000F92E7 /* Extensions */,
 				047D169829DFD045000F92E7 /* AssetCollections */,
 				0483A3BB29DE782C00F28A14 /* Network */,
@@ -210,6 +213,14 @@
 				047D169629DF10D5000F92E7 /* ServiceError.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		0489A2A829E00D730051E538 /* AssetDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0410EB9B29E00DAA0092B543 /* AssetDetailViewController.swift */,
+			);
+			path = AssetDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +373,7 @@
 				041EEF8729DFE26A0001FD35 /* AssetCollectionsViewModel.swift in Sources */,
 				0483A3BD29DE788C00F28A14 /* NetworkRequest+Moya.swift in Sources */,
 				0489A2A729DFF9AF0051E538 /* NSObject+className.swift in Sources */,
+				0410EB9C29E00DAA0092B543 /* AssetDetailViewController.swift in Sources */,
 				047D169E29DFDA21000F92E7 /* AssetCollectionsModel.swift in Sources */,
 				047D169129DEDD9E000F92E7 /* AssetCollectionsRequest.swift in Sources */,
 				0489A29A29DFEEDC0051E538 /* AssetCollectionCell.swift in Sources */,
