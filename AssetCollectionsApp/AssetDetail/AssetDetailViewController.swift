@@ -34,6 +34,18 @@ final class AssetDetailViewController: UIViewController {
     }
 }
 
+// MARK: - Selectors
+
+private extension AssetDetailViewController {
+    
+    @objc func permalLinkButtonPress(_ sender: UIButton) {
+        if let url = viewModel.asset.permalinkURL {
+            let vc = SafariViewController(url: url)
+            present(vc, animated: true)
+        }
+    }
+}
+
 // MARK: - Setups
 
 private extension AssetDetailViewController {
@@ -112,6 +124,7 @@ private extension AssetDetailViewController {
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.layer.cornerRadius = 4
         button.layer.borderWidth = 1
+        button.addTarget(self, action: #selector(permalLinkButtonPress(_:)), for: .touchUpInside)
         return button
     }
 }
