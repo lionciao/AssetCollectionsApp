@@ -31,6 +31,7 @@
 		0483A3BD29DE788C00F28A14 /* NetworkRequest+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483A3BC29DE788B00F28A14 /* NetworkRequest+Moya.swift */; };
 		0483A3C129DE79D200F28A14 /* NetworkCancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483A3C029DE79D200F28A14 /* NetworkCancellable.swift */; };
 		0483A3C329DE7E4700F28A14 /* DefaultNetworkService+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483A3C229DE7E4700F28A14 /* DefaultNetworkService+Moya.swift */; };
+		0489A29A29DFEEDC0051E538 /* AssetCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489A29929DFEEDC0051E538 /* AssetCollectionCell.swift */; };
 		0489A29D29DFEF5D0051E538 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0489A29C29DFEF5D0051E538 /* SnapKit */; };
 		0489A29F29DFF3320051E538 /* UIImageView+Nuke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489A29E29DFF3320051E538 /* UIImageView+Nuke.swift */; };
 /* End PBXBuildFile section */
@@ -111,9 +112,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041EEF8829DFEE6B0001FD35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0489A29929DFEEDC0051E538 /* AssetCollectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		047D169829DFD045000F92E7 /* AssetCollections */ = {
 			isa = PBXGroup;
 			children = (
+				041EEF8829DFEE6B0001FD35 /* View */,
 				047D169029DEDD9E000F92E7 /* AssetCollectionsRequest.swift */,
 				047D169929DFD077000F92E7 /* AssetCollectionsEntity.swift */,
 				047D169D29DFDA21000F92E7 /* AssetCollectionsModel.swift */,
@@ -350,6 +360,7 @@
 				0483A3BD29DE788C00F28A14 /* NetworkRequest+Moya.swift in Sources */,
 				047D169E29DFDA21000F92E7 /* AssetCollectionsModel.swift in Sources */,
 				047D169129DEDD9E000F92E7 /* AssetCollectionsRequest.swift in Sources */,
+				0489A29A29DFEEDC0051E538 /* AssetCollectionCell.swift in Sources */,
 				047D16A629DFDDA6000F92E7 /* AssetCollectionsInteractorSpec.swift in Sources */,
 				047D169729DF10D5000F92E7 /* ServiceError.swift in Sources */,
 				0483A38329DC327100F28A14 /* SceneDelegate.swift in Sources */,
