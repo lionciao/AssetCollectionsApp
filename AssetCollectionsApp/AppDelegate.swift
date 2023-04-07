@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 interactor: AssetCollectionsInteractor(service: DefaultNetworkService())
             )
         )
-        window.rootViewController = initialViewController
+        let nvc = UINavigationController(rootViewController: initialViewController)
+        window.rootViewController = nvc
         window.makeKeyAndVisible()
         self.window = window
         return true

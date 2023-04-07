@@ -72,7 +72,15 @@ extension AssetCollectionsViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 
-extension AssetCollectionsViewController: UICollectionViewDelegate {}
+extension AssetCollectionsViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = viewModel.assets[indexPath.item]
+        let detailViewModel = AssetDetailViewModel(asset: model)
+        let vc = AssetDetailViewController(viewModel: detailViewModel)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
 
 // MARK: - UICollectionViewDelegateFlowLayout
 
