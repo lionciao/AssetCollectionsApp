@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0410EB9C29E00DAA0092B543 /* AssetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410EB9B29E00DAA0092B543 /* AssetDetailViewController.swift */; };
+		0410EB9E29E010140092B543 /* AssetDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410EB9D29E010140092B543 /* AssetDetailViewModel.swift */; };
 		041EEF8329DFDEDE0001FD35 /* AssetCollectionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EEF8229DFDEDE0001FD35 /* AssetCollectionsInteractor.swift */; };
 		041EEF8729DFE26A0001FD35 /* AssetCollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EEF8629DFE26A0001FD35 /* AssetCollectionsViewModel.swift */; };
 		047D168D29DEDAA5000F92E7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D168C29DEDAA5000F92E7 /* NetworkService.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		0410EB9B29E00DAA0092B543 /* AssetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailViewController.swift; sourceTree = "<group>"; };
+		0410EB9D29E010140092B543 /* AssetDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailViewModel.swift; sourceTree = "<group>"; };
 		041EEF8229DFDEDE0001FD35 /* AssetCollectionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionsInteractor.swift; sourceTree = "<group>"; };
 		041EEF8629DFE26A0001FD35 /* AssetCollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionsViewModel.swift; sourceTree = "<group>"; };
 		047D168C29DEDAA5000F92E7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				0410EB9B29E00DAA0092B543 /* AssetDetailViewController.swift */,
+				0410EB9D29E010140092B543 /* AssetDetailViewModel.swift */,
 			);
 			path = AssetDetail;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				047D16A429DFDC1B000F92E7 /* AssetCollections+ExtensionWrapper.swift in Sources */,
 				047D16A229DFDB77000F92E7 /* ExtensionWrapper.swift in Sources */,
 				0489A29F29DFF3320051E538 /* UIImageView+Nuke.swift in Sources */,
+				0410EB9E29E010140092B543 /* AssetDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

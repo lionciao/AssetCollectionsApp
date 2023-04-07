@@ -15,7 +15,10 @@ final class AssetDetailViewController: UIViewController {
     private lazy var contentLabel = makeContentLabel()
     private lazy var permalLinkButton = makePermalLinkButton()
     
-    init() {
+    private let viewModel: AssetDetailViewModel
+    
+    init(viewModel: AssetDetailViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -27,12 +30,13 @@ final class AssetDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        config(with: viewModel.asset)
     }
 }
 
-// MARK: - External setups
+// MARK: - Setups
 
-extension AssetDetailViewController {
+private extension AssetDetailViewController {
 
     func config(with model: AssetCollectionsModel.AssetModel) {
         navigationController?.title = model.collection.name
