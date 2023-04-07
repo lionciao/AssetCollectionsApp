@@ -32,6 +32,7 @@
 		0483A3C129DE79D200F28A14 /* NetworkCancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483A3C029DE79D200F28A14 /* NetworkCancellable.swift */; };
 		0483A3C329DE7E4700F28A14 /* DefaultNetworkService+Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483A3C229DE7E4700F28A14 /* DefaultNetworkService+Moya.swift */; };
 		0489A29D29DFEF5D0051E538 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0489A29C29DFEF5D0051E538 /* SnapKit */; };
+		0489A29F29DFF3320051E538 /* UIImageView+Nuke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489A29E29DFF3320051E538 /* UIImageView+Nuke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		0483A3BC29DE788B00F28A14 /* NetworkRequest+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequest+Moya.swift"; sourceTree = "<group>"; };
 		0483A3C029DE79D200F28A14 /* NetworkCancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCancellable.swift; sourceTree = "<group>"; };
 		0483A3C229DE7E4700F28A14 /* DefaultNetworkService+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultNetworkService+Moya.swift"; sourceTree = "<group>"; };
+		0489A29929DFEEDC0051E538 /* AssetCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionCell.swift; sourceTree = "<group>"; };
+		0489A29E29DFF3320051E538 /* UIImageView+Nuke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Nuke.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				047D16A129DFDB77000F92E7 /* ExtensionWrapper.swift */,
+				0489A29E29DFF3320051E538 /* UIImageView+Nuke.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -353,6 +357,7 @@
 				041EEF8329DFDEDE0001FD35 /* AssetCollectionsInteractor.swift in Sources */,
 				047D16A429DFDC1B000F92E7 /* AssetCollections+ExtensionWrapper.swift in Sources */,
 				047D16A229DFDB77000F92E7 /* ExtensionWrapper.swift in Sources */,
+				0489A29F29DFF3320051E538 /* UIImageView+Nuke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
