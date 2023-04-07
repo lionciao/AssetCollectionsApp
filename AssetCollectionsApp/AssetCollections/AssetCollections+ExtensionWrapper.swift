@@ -23,10 +23,10 @@ private extension ExtensionWrapper where Base == AssetCollectionsEntity {
     func map(assets: [Base.AssetEntity]) -> [AssetCollectionsModel.AssetModel] {
         return assets.map {
             AssetCollectionsModel.AssetModel(
-                imageURL: URL(string: $0.imageURLString),
+                imageURL: URL(string: $0.imageURLString ?? ""),
                 name: $0.name,
                 contentDescription: $0.contentDescription,
-                permalinkURL: URL(string: $0.permalinkString),
+                permalinkURL: URL(string: $0.permalinkString ?? ""),
                 collection: map(collection: $0.collection)
             )
         }

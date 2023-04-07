@@ -14,13 +14,13 @@ struct AssetCollectionsEntity: Decodable {
     struct AssetEntity: Decodable {
      
         /// 收藏品圖片
-        let imageURLString: String
+        let imageURLString: String?
         /// 收藏品名稱
         let name: String
         /// 收藏品描述
         let contentDescription: String
         /// 按鈕連結
-        let permalinkString: String
+        let permalinkString: String?
         let collection: CollectionEntity
         
         struct CollectionEntity: Decodable {
