@@ -31,13 +31,21 @@ struct AssetsCollectionParameter {
     var parameters: [String: Any] {
         [
             "owner": owner,
-            "limit": limit
+            "limit": limit,
+            "offset": offset
         ]
     }
     
     /// Requests specific owner all the time.
     private let owner: String = "0x85fD692D2a075908079261F5E351e7fE0267dB02"
-    private let limit: Int = 20
-    // TODO: pagination
-    private let offset: Int = 0
+    private let limit: Int
+    private let offset: Int
+    
+    init(
+        limit: Int,
+        offset: Int
+    ) {
+        self.limit = limit
+        self.offset = offset
+    }
 }

@@ -31,11 +31,20 @@ final class AssetCollectionsViewModel {
         self.assets = interactor.assets
     }
     
-    func fetchAssetCollections(limit: Int) {
-        interactor.fetchAssetCollections(limit: limit) { [weak self] assets in
+    func fetchAssetCollections() {
+        interactor.fetchAssetCollections() { [weak self] assets in
             guard let self = self else { return }
             self.assets = assets
             self.delegate?.assetCollectionsViewModel(self, didFetchAssets: assets)
         }
+    }
+    
+    func isTimeToFetchNextPage(whenScrollTo itemIndex: Int) -> Bool {
+        guard
+            let lastItemIndex = assets.indices.last,
+            itemIndex + 3 > lastItemIndex else {
+            return false
+        }
+        return true
     }
 }

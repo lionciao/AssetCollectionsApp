@@ -29,7 +29,8 @@ final class AssetCollectionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchAssetCollections(limit: 20)
+        startLoading()
+        viewModel.fetchAssetCollections()
         setupUI()
     }
 }
@@ -40,6 +41,7 @@ extension AssetCollectionsViewController: AssetCollectionsViewModelDelegate {
     
     func assetCollectionsViewModel(_ viewModel: AssetCollectionsViewModel, didFetchAssets assets: [Asset]) {
         reload()
+        stopLoading()
     }
 }
 
@@ -88,6 +90,12 @@ extension AssetCollectionsViewController: UICollectionViewDelegateFlowLayout {
         let width = (collectionView.frame.width - 20) / 2
         return CGSize(width: width, height: 150)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if viewModel.isTimeToFetchNextPage(whenScrollTo: indexPath.row) {
+            viewModel.fetchAssetCollections()
+        }
+    }
 }
 
 // MARK: Helpers
@@ -96,6 +104,16 @@ private extension AssetCollectionsViewController {
     
     func reload() {
         collectionView.reloadData()
+    }
+    
+    func startLoading() {
+        collectionView.isHidden = true
+        loadingIndicatorView.startAnimating()
+    }
+    
+    func stopLoading() {
+        collectionView.isHidden = false
+        loadingIndicatorView.stopAnimating()
     }
 }
 
