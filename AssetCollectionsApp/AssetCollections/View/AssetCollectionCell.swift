@@ -57,7 +57,8 @@ private extension AssetCollectionCell {
     func makeCoverImageView() -> UIImageView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
         return imageView
     }
     

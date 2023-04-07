@@ -83,6 +83,11 @@ extension AssetCollectionsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return flowLayout.minimumLineSpacing
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (collectionView.frame.width - 20) / 2
+        return CGSize(width: width, height: 150)
+    }
 }
 
 // MARK: Helpers
@@ -99,11 +104,12 @@ private extension AssetCollectionsViewController {
 private extension AssetCollectionsViewController {
     
     func setupUI() {
+        view.backgroundColor = .white
         [collectionView, loadingIndicatorView].forEach {
             view.addSubview($0)
         }
         collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalTo(view.safeAreaLayoutGuide)
         }
         loadingIndicatorView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -123,7 +129,7 @@ private extension AssetCollectionsViewController {
     func makeCollectionViewLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10
-        layout.sectionInset = UIEdgeInsets(top: 14, left: 10, bottom: 14, right: 10)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return layout
     }
     
