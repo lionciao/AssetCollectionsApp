@@ -34,6 +34,7 @@
 		0489A29A29DFEEDC0051E538 /* AssetCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489A29929DFEEDC0051E538 /* AssetCollectionCell.swift */; };
 		0489A29D29DFEF5D0051E538 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0489A29C29DFEF5D0051E538 /* SnapKit */; };
 		0489A29F29DFF3320051E538 /* UIImageView+Nuke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489A29E29DFF3320051E538 /* UIImageView+Nuke.swift */; };
+		0489A2A729DFF9AF0051E538 /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489A2A629DFF9AF0051E538 /* NSObject+className.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		0483A3C229DE7E4700F28A14 /* DefaultNetworkService+Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultNetworkService+Moya.swift"; sourceTree = "<group>"; };
 		0489A29929DFEEDC0051E538 /* AssetCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionCell.swift; sourceTree = "<group>"; };
 		0489A29E29DFF3320051E538 /* UIImageView+Nuke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Nuke.swift"; sourceTree = "<group>"; };
+		0489A2A629DFF9AF0051E538 /* NSObject+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+className.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				047D16A129DFDB77000F92E7 /* ExtensionWrapper.swift */,
 				0489A29E29DFF3320051E538 /* UIImageView+Nuke.swift */,
+				0489A2A629DFF9AF0051E538 /* NSObject+className.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				0483A38129DC327100F28A14 /* AppDelegate.swift in Sources */,
 				041EEF8729DFE26A0001FD35 /* AssetCollectionsViewModel.swift in Sources */,
 				0483A3BD29DE788C00F28A14 /* NetworkRequest+Moya.swift in Sources */,
+				0489A2A729DFF9AF0051E538 /* NSObject+className.swift in Sources */,
 				047D169E29DFDA21000F92E7 /* AssetCollectionsModel.swift in Sources */,
 				047D169129DEDD9E000F92E7 /* AssetCollectionsRequest.swift in Sources */,
 				0489A29A29DFEEDC0051E538 /* AssetCollectionCell.swift in Sources */,
