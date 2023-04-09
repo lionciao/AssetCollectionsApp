@@ -24,11 +24,11 @@ final class AssetCollectionsViewModel {
     var assets: [AssetCollectionsModel.AssetModel] = []
     var shouldShowEmptyView: Bool { return assets.isEmpty }
     
-    private let interactor: AssetCollectionsInteractor
+    private let interactor: AssetCollectionsInteractorSpec
     private let coordinator: AssetCollectionsCoordinatorSepc
     
     init(
-        interactor: AssetCollectionsInteractor,
+        interactor: AssetCollectionsInteractorSpec,
         coordinator: AssetCollectionsCoordinatorSepc
     ) {
         self.interactor = interactor
