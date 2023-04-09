@@ -16,14 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        // TODO: coordinator
-        let initialViewController = AssetCollectionsViewController(
-            viewModel: AssetCollectionsViewModel(
-                interactor: AssetCollectionsInteractor(service: DefaultNetworkService())
-            )
-        )
-        let nvc = UINavigationController(rootViewController: initialViewController)
-        window.rootViewController = nvc
+        window.rootViewController = RootCoordinator().assetCollectionsViewController()
         window.makeKeyAndVisible()
         self.window = window
     }
