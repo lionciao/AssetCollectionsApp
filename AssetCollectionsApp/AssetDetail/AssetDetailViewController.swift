@@ -39,10 +39,7 @@ final class AssetDetailViewController: UIViewController {
 private extension AssetDetailViewController {
     
     @objc func permalLinkButtonPress(_ sender: UIButton) {
-        if let url = viewModel.asset.permalinkURL {
-            let vc = SafariViewController(url: url)
-            present(vc, animated: true)
-        }
+        viewModel.presentPermalink()
     }
 }
 

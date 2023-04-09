@@ -18,7 +18,9 @@ final class AssetCollectionsCoordinator: AssetCollectionsCoordinatorSepc {
     weak var navigationController: UINavigationController?
         
     func present(asset: AssetCollectionsModel.AssetModel) {
-        let vm = AssetDetailViewModel(asset: asset)
+        let coordinator = AssetDetailCoordinator()
+        coordinator.navigationController = navigationController
+        let vm = AssetDetailViewModel(asset: asset, coordinator: coordinator)
         let vc = AssetDetailViewController(viewModel: vm)
         navigationController?.pushViewController(vc, animated: true)
     }

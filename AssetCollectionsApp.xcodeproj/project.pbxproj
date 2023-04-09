@@ -12,6 +12,7 @@
 		0410EBA329E015DF0092B543 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410EBA229E015DF0092B543 /* SafariViewController.swift */; };
 		0410EBA629E2B21D0092B543 /* AssetCollectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410EBA529E2B21D0092B543 /* AssetCollectionCoordinator.swift */; };
 		0410EBA829E2B7C00092B543 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410EBA729E2B7C00092B543 /* RootCoordinator.swift */; };
+		0410EBAA29E2BD820092B543 /* AssetDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410EBA929E2BD820092B543 /* AssetDetailCoordinator.swift */; };
 		041EEF8329DFDEDE0001FD35 /* AssetCollectionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EEF8229DFDEDE0001FD35 /* AssetCollectionsInteractor.swift */; };
 		041EEF8729DFE26A0001FD35 /* AssetCollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EEF8629DFE26A0001FD35 /* AssetCollectionsViewModel.swift */; };
 		047D168D29DEDAA5000F92E7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D168C29DEDAA5000F92E7 /* NetworkService.swift */; };
@@ -65,6 +66,7 @@
 		0410EBA229E015DF0092B543 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		0410EBA529E2B21D0092B543 /* AssetCollectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionCoordinator.swift; sourceTree = "<group>"; };
 		0410EBA729E2B7C00092B543 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		0410EBA929E2BD820092B543 /* AssetDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailCoordinator.swift; sourceTree = "<group>"; };
 		041EEF8229DFDEDE0001FD35 /* AssetCollectionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionsInteractor.swift; sourceTree = "<group>"; };
 		041EEF8629DFE26A0001FD35 /* AssetCollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionsViewModel.swift; sourceTree = "<group>"; };
 		047D168C29DEDAA5000F92E7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				0410EBA529E2B21D0092B543 /* AssetCollectionCoordinator.swift */,
 				0410EBA729E2B7C00092B543 /* RootCoordinator.swift */,
+				0410EBA929E2BD820092B543 /* AssetDetailCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				0483A3BD29DE788C00F28A14 /* NetworkRequest+Moya.swift in Sources */,
 				0489A2A729DFF9AF0051E538 /* NSObject+className.swift in Sources */,
 				0410EB9C29E00DAA0092B543 /* AssetDetailViewController.swift in Sources */,
+				0410EBAA29E2BD820092B543 /* AssetDetailCoordinator.swift in Sources */,
 				047D169E29DFDA21000F92E7 /* AssetCollectionsModel.swift in Sources */,
 				047D169129DEDD9E000F92E7 /* AssetCollectionsRequest.swift in Sources */,
 				0489A29A29DFEEDC0051E538 /* AssetCollectionCell.swift in Sources */,
