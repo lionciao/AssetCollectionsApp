@@ -163,6 +163,7 @@
 				047D16A529DFDDA6000F92E7 /* AssetCollectionsInteractorSpec.swift */,
 				041EEF8229DFDEDE0001FD35 /* AssetCollectionsInteractor.swift */,
 				041EEF8629DFE26A0001FD35 /* AssetCollectionsViewModel.swift */,
+				0483A38429DC327100F28A14 /* AssetCollectionsViewController.swift */,
 			);
 			path = AssetCollections;
 			sourceTree = "<group>";
@@ -208,7 +209,6 @@
 				0483A3BB29DE782C00F28A14 /* Network */,
 				0483A38029DC327100F28A14 /* AppDelegate.swift */,
 				0483A38229DC327100F28A14 /* SceneDelegate.swift */,
-				0483A38429DC327100F28A14 /* AssetCollectionsViewController.swift */,
 				0483A38929DC327100F28A14 /* Assets.xcassets */,
 				0483A38B29DC327100F28A14 /* LaunchScreen.storyboard */,
 				0483A38E29DC327100F28A14 /* Info.plist */,
