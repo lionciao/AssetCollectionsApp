@@ -1,5 +1,5 @@
 //
-//  AssetCollectionCoordinator.swift
+//  AssetCollectionsCoordinator.swift
 //  AssetCollectionsApp
 //
 //  Created by Ciao on 2023/4/9.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol AssetCollectionCoordinatorSepc: AnyObject {
+protocol AssetCollectionsCoordinatorSepc: AnyObject {
     
     func present(asset: AssetCollectionsModel.AssetModel)
     func dismissAsset()
 }
       
-final class AssetCollectionCoordinator: AssetCollectionCoordinatorSepc {
+final class AssetCollectionsCoordinator: AssetCollectionsCoordinatorSepc {
     
     weak var navigationController: UINavigationController?
         

@@ -10,7 +10,7 @@ import UIKit
 final class RootCoordinator {
     
     func assetCollectionsViewController() -> UINavigationController {
-        let collectionsCoordinator = AssetCollectionCoordinator()
+        let collectionsCoordinator = AssetCollectionsCoordinator()
         let vc = AssetCollectionsViewController(
             viewModel: AssetCollectionsViewModel(
                 interactor: AssetCollectionsInteractor(
