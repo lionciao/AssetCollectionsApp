@@ -75,10 +75,8 @@ extension AssetCollectionsViewController: UICollectionViewDataSource {
 extension AssetCollectionsViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let model = viewModel.assets[indexPath.item]
-        let detailViewModel = AssetDetailViewModel(asset: model)
-        let vc = AssetDetailViewController(viewModel: detailViewModel)
-        navigationController?.pushViewController(vc, animated: true)
+        let asset = viewModel.assets[indexPath.item]
+        viewModel.present(asset: asset)
     }
 }
 

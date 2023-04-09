@@ -25,10 +25,15 @@ final class AssetCollectionsViewModel {
     var shouldShowEmptyView: Bool { return assets.isEmpty }
     
     private let interactor: AssetCollectionsInteractor
+    private let coordinator: AssetCollectionCoordinatorSepc
     
-    init(interactor: AssetCollectionsInteractor) {
+    init(
+        interactor: AssetCollectionsInteractor,
+        coordinator: AssetCollectionCoordinatorSepc
+    ) {
         self.interactor = interactor
         self.assets = interactor.assets
+        self.coordinator = coordinator
     }
     
     func fetchAssetCollections() {
@@ -46,5 +51,18 @@ final class AssetCollectionsViewModel {
             return false
         }
         return true
+    }
+}
+
+// MARK: - Coordinator
+
+extension AssetCollectionsViewModel {
+    
+    func present(asset: AssetCollectionsModel.AssetModel) {
+        coordinator.present(asset: asset)
+    }
+    
+    func dismissAsset() {
+        coordinator.dismissAsset()
     }
 }
