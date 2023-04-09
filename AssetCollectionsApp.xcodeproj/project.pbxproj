@@ -14,6 +14,7 @@
 		0410EBA829E2B7C00092B543 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410EBA729E2B7C00092B543 /* RootCoordinator.swift */; };
 		0410EBAA29E2BD820092B543 /* AssetDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410EBA929E2BD820092B543 /* AssetDetailCoordinator.swift */; };
 		0410EBAC29E2C8260092B543 /* AssetCollectionsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410EBAB29E2C8260092B543 /* AssetCollectionsViewModelTests.swift */; };
+		0410EBB029E2F6080092B543 /* AssetCollectionsEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410EBAF29E2F6080092B543 /* AssetCollectionsEntityTests.swift */; };
 		041EEF8329DFDEDE0001FD35 /* AssetCollectionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EEF8229DFDEDE0001FD35 /* AssetCollectionsInteractor.swift */; };
 		041EEF8729DFE26A0001FD35 /* AssetCollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041EEF8629DFE26A0001FD35 /* AssetCollectionsViewModel.swift */; };
 		047D168D29DEDAA5000F92E7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D168C29DEDAA5000F92E7 /* NetworkService.swift */; };
@@ -69,6 +70,7 @@
 		0410EBA729E2B7C00092B543 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		0410EBA929E2BD820092B543 /* AssetDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailCoordinator.swift; sourceTree = "<group>"; };
 		0410EBAB29E2C8260092B543 /* AssetCollectionsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionsViewModelTests.swift; sourceTree = "<group>"; };
+		0410EBAF29E2F6080092B543 /* AssetCollectionsEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionsEntityTests.swift; sourceTree = "<group>"; };
 		041EEF8229DFDEDE0001FD35 /* AssetCollectionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionsInteractor.swift; sourceTree = "<group>"; };
 		041EEF8629DFE26A0001FD35 /* AssetCollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionsViewModel.swift; sourceTree = "<group>"; };
 		047D168C29DEDAA5000F92E7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				0483A39729DC327200F28A14 /* AssetCollectionsAppTests.swift */,
 				0410EBAB29E2C8260092B543 /* AssetCollectionsViewModelTests.swift */,
+				0410EBAF29E2F6080092B543 /* AssetCollectionsEntityTests.swift */,
 			);
 			path = AssetCollectionsAppTests;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0483A39829DC327200F28A14 /* AssetCollectionsAppTests.swift in Sources */,
+				0410EBB029E2F6080092B543 /* AssetCollectionsEntityTests.swift in Sources */,
 				0410EBAC29E2C8260092B543 /* AssetCollectionsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
